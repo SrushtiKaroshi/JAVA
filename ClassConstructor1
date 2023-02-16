@@ -1,0 +1,39 @@
+import java.util.*;
+
+class Demo {
+
+	public Demo() {
+		System.out.println("Inside Default Constructor...");
+	}
+
+	public void Demo() {
+		System.out.println("Inside Method of a Class Demo...");
+
+	}
+
+	public Demo(int x) {
+		if (x < 10)
+			return;
+
+		System.out.println("one parameter constructor with interger as a parameter  gets called..");
+	}
+
+	public Demo(String s) {
+		System.out.println("one parameter constructor with String as a parameter  gets called..");
+	}
+
+}
+
+class ClassConstructor1 {
+
+	public static void main(String args[]) {
+		Demo d1 = new Demo();
+		Demo d2 = new Demo(10);
+		Demo d3 = new Demo(7);
+		d3.Demo();
+		Demo d4 = new Demo("hello");
+		d1.Demo();
+
+	}
+
+}
