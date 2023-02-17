@@ -1,0 +1,23 @@
+import java.lang.*;
+
+class Demo {
+
+	public Demo() {
+
+		this(10);
+	}
+
+	public Demo(int x) {
+		System.out.println("one parameter constructor with interger as a parameter gets called...");
+	}
+}
+
+class ClassConstructor2 {
+
+	public static void main(String args[]) {
+		Demo d1 = new Demo();
+		Demo d2 = new Demo(10);
+
+	}
+
+}
