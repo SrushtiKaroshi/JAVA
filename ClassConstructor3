@@ -1,0 +1,32 @@
+import java.util.*;
+
+class Demo {
+
+	Demo() {
+		System.out.println("Defalut constructor of a class is invoked...");
+	}
+
+	public Demo(int x) {
+		this(10, 20);
+		System.out.println("Public constructor of a class is invoked...");
+	}
+
+	protected Demo(String s) {
+		System.out.println("Protected constructor of a class is invoked..");
+	}
+
+	private Demo(int x, int y) {
+		System.out.println("Private constructor of a class is invoked.....");
+	}
+
+}
+
+class ClassConstructor3 {
+
+	public static void main(String args[]) {
+		Demo d1 = new Demo();
+		Demo d2 = new Demo(10);
+		Demo d3 = new Demo("hello");
+		// Demo d4 = new Demo(10,20);
+	}
+}
