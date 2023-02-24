@@ -1,0 +1,36 @@
+import java.lang.*;
+
+class Demo {
+	static int i;
+
+	int j;
+
+	Demo() {
+		i = 10;
+		j = 10;
+	}
+}
+
+class Static2 {
+	public static void main(String args[]) {
+		Demo d1 = new Demo();
+		Demo d2 = new Demo();
+		System.out.println("Value of i in d1 : " + d1.i);
+		System.out.println("Value of i in d2 : " + d2.i);
+		System.out.printf("\n");
+		d1.i++;
+
+		System.out.println("Value of i in d1 : " + d1.i);
+		System.out.println("Value of i in d2 : " + d2.i);
+
+		System.out.printf("\n");
+		System.out.println("Value of j in d1 : " + d1.j);
+		System.out.println("Value of j in d2 : " + d2.j);
+
+		d1.j++;
+
+		System.out.printf("\n");
+		System.out.println("Value of j in d1 : " + d1.j);
+		System.out.println("Value of j in d2 : " + d2.j);
+	}
+}
