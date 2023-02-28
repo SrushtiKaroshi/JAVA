@@ -1,0 +1,33 @@
+import java.lang.*;
+
+class Demo {
+	static int i;
+	int j;
+
+	Demo() {
+		System.out.println("Inside Demo() constructor...");
+		i = 10;
+		j = 10;
+	}
+
+	static void fun1() {
+		System.out.println("Inside static method");
+		System.out.println("Value of i : " + i);
+	}
+
+	void fun2() {
+		System.out.println("Inside non static method");
+		System.out.println("Value of i : " + i);
+		System.out.println("Value of j : " + j);
+	}
+}
+
+class Static4 {
+	public static void main(String args[]) {
+		Demo d1 = new Demo();
+		d1.fun1();
+		Demo.fun1();
+		d1.fun2();
+
+	}
+}
