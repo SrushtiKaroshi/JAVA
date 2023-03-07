@@ -1,0 +1,19 @@
+import java.lang.*;
+
+class StaticBlock3 {
+	static {
+		System.out.println("Inside static1");
+	}
+
+	static {
+		System.out.println("Inside static2");
+	}
+
+	public static void main(String args[]) {
+		System.out.println("Inside main");
+	}
+
+	static {
+		System.out.println("After main");
+	}
+}
