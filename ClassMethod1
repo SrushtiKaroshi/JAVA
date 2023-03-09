@@ -1,0 +1,68 @@
+import java.lang.*;
+
+class Demo {
+
+    int i = 10;
+
+    void Function() {
+        System.out.println("Inside function");
+    }
+
+}
+
+class Inner {
+    void fun() {
+        System.out.println("In fun function of Inner class");
+    }
+}
+
+class ClassMethod1 {
+
+    int i = 10;
+
+    ClassMethod1() {
+        System.out.println("Constructor of Computer class.");
+        System.out.println("Constructor method is called when an object of class is created");
+    }
+
+    void computer_method() {
+        System.out.println("Power gone! Shut down your PC soon...");
+    }
+
+    public static void main(String[] args) {
+        ClassMethod1 my = new ClassMethod1();
+        my.computer_method();
+        my.nonStaticMethod();
+
+        staticMethod();
+
+        Laptop your = new Laptop();
+        your.laptop_method();
+
+        Inner obji = new Inner();
+        obji.fun();
+
+        Demo objd = new Demo();
+        objd.Function();
+        System.out.println("Value of i is : " + objd.i);
+    }
+
+    static void staticMethod() {
+        System.out.println("Static method can be called without creating an object");
+    }
+
+    void nonStaticMethod() {
+        System.out.println("Non static method must be called by creating an object");
+    }
+
+}
+
+class Laptop {
+    Laptop() {
+        System.out.println("Constructor of Laptop class.");
+    }
+
+    void laptop_method() {
+        System.out.println("99% Battery available.");
+    }
+}
