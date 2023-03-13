@@ -1,0 +1,38 @@
+import java.lang.util.*;
+
+class Method {
+
+	int x, y;
+	int i = 10;
+	int j = 20;
+
+	Method() {
+		System.out.println("Default Constructor...");
+	}
+
+	public void fun1() {
+		System.out.println("This is a public method...");
+		System.out.println("Value of i is : " + i + " & j is : " + j);
+	}
+
+	public void fun2() {
+		System.out.println("This is non parameterized function...");
+	}
+
+	public void fun3(int x) {
+		System.out.println("This is parameterized function...");
+	}
+
+}
+
+class Overloading1 {
+
+	public static void main(String args[]) {
+		Method obj = new Method();
+		obj.fun1();
+		obj.fun2();
+		obj.fun3(10);
+	}
+
+}
+
